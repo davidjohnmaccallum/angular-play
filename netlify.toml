@@ -1,0 +1,4 @@
+[build]
+  functions = "cloud-functions/dist"
+  command = "build.sh"
+  publish = "dist/angular-play"
