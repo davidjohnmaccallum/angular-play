@@ -623,7 +623,7 @@ export class ContactService {
 
   async list(pageIndex: number, pageSize: number): Promise<ContactList> {
     return {
-      contacts: this.data.slice(pageIndex, pageIndex + pageSize),
+      contacts: this.data.slice(pageIndex * pageSize, pageIndex * pageSize + pageSize),
       pageIndex,
       pageSize,
       totalCount: this.data.length,

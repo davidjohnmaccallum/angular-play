@@ -9,6 +9,7 @@
   </mat-toolbar>
 </header>
 <main>
+
   <div class="card-list" *ngIf="(isHandset$ | async)">
     <mat-card *ngFor="let contact of contacts">
       <mat-card-content>
