@@ -631,7 +631,7 @@ export class ContactService {
   }
 
   async create(contact: Contact): Promise<Contact> {
-    this.data.push(contact);
+    this.data.unshift(contact);
     return contact;
   }
 

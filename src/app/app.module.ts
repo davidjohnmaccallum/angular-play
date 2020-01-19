@@ -15,11 +15,20 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorInfoComponent } from './components/error-info/error-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
+    ContactFormComponent,
+    ErrorInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,9 +43,15 @@ import { MatCardModule } from '@angular/material/card';
     MatTableModule,
     MatPaginatorModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ContactFormComponent, ErrorInfoComponent]
 })
 export class AppModule { }
